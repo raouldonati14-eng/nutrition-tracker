@@ -23,8 +23,7 @@ export default function App() {
   const [activeMealPeriod, setActiveMealPeriod] = useState("breakfast");
   const [weeklyLog, setWeeklyLog] = useState(createEmptyWeek());
 
-  // 🔒 Teacher access toggle
-  const IS_TEACHER_MODE = false; // set to true ONLY when you want teacher access
+  const IS_TEACHER_MODE = false; // change to true ONLY when you want teacher access
 
   return (
     <div style={{ padding: 20 }}>
@@ -33,9 +32,7 @@ export default function App() {
       <div style={{ display: "flex", justifyContent: "center", gap: 20 }}>
         <button
           onClick={() => setActiveTab("student")}
-          style={{
-            fontWeight: activeTab === "student" ? "bold" : "normal"
-          }}
+          style={{ fontWeight: activeTab === "student" ? "bold" : "normal" }}
         >
           Student View
         </button>
@@ -43,9 +40,7 @@ export default function App() {
         {IS_TEACHER_MODE && (
           <button
             onClick={() => setActiveTab("teacher")}
-            style={{
-              fontWeight: activeTab === "teacher" ? "bold" : "normal"
-            }}
+            style={{ fontWeight: activeTab === "teacher" ? "bold" : "normal" }}
           >
             Teacher View
           </button>
