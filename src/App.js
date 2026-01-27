@@ -22,12 +22,10 @@ export default function App() {
   const [activeTab, setActiveTab] = useState("student");
   const [activeMealPeriod, setActiveMealPeriod] = useState("breakfast");
   const [weeklyLog, setWeeklyLog] = useState(createEmptyWeek());
-
   const IS_TEACHER_MODE = false; // change to true ONLY when you want teacher access
 
   return (
     <div style={{ padding: 20 }}>
-
       {/* TAB BAR */}
       <div style={{ display: "flex", justifyContent: "center", gap: 20 }}>
         <button
