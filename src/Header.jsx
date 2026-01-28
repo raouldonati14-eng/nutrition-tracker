@@ -1,10 +1,12 @@
-export default function Header({ title, subtitle }) {
+import React from "react";
+
+function Header({ title, subtitle }) {
   return (
-    <header style={{ textAlign: "CENTER", marginBottom: 20 }}>
-      <h1 style={{ fontSize: "2.5rem", margin: 0 }}>{title}</h1>
-      {subtitle && (
-        <p style={{ marginTop: 8, color: "#555" }}>{subtitle}</p>
-      )}
+    <header style={{ textAlign: "center", marginBottom: 20 }}>
+      <h1>{title}</h1>
+      {subtitle && <h2>{subtitle}</h2>}
     </header>
   );
 }
+
+export default Header;
