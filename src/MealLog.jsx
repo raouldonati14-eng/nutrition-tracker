@@ -166,7 +166,7 @@ export default function MealLog({ weeklyLog, setWeeklyLog, activeMealPeriod, set
         foods.forEach(food => {
           const { letter, status, percents } = gradeItemWithStatus(food);
           rows.push([
-            `"${studentName || "Unknown"}"`,
+           `"${(studentName || "Unknown").replace(/"/g, '""')}"`,
             day,
             meal,
             food.name,
